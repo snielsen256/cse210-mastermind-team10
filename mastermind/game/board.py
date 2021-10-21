@@ -1,14 +1,10 @@
 import random
-from mastermind.game import player
-
-from mastermind.game.roster import Roster
 
 class Board:
 
     def __init__(self):
 
-        user_guess = []
-        applied_guess = []
+        
         ""
 
         """The class constructor.
@@ -16,7 +12,8 @@ class Board:
         Args:
             self (Board): an instance of Board
         """
-
+        self.user_guess = []
+        self.applied_guess = []
         self.code = 0
         self._prepare()
 
@@ -27,7 +24,6 @@ class Board:
             self (Board): an instance of Board
         """
         self.code = random.randint(1000,9999)
-
     def board_string(self, player1, player2):
         """Turns the board into a string to be printed 
 
