@@ -6,7 +6,7 @@ from mastermind.game.roster import Roster
 class Board:
 
     def __init__(self):
-        dawson_work
+
         user_guess = []
         applied_guess = []
         ""
@@ -74,7 +74,7 @@ class Board:
         code_string = str(self.code)
         for i in range(len(self.code)):
             l = 0
-            for j in range(len(guess))
+            for j in range(len(guess)):
                 if guess_string[j] == code_string[i] & l == k:
                     self.applied_guess[j] = 'x'
                 
