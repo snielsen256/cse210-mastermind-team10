@@ -41,8 +41,8 @@ class Board:
             board += "-------------------\n"
 
         board = "\n-------------------\n"
-        board += f"Player {players[0]}: {self.user_guess[0]}, {self.applied_guess[-1]}\n"
-        board += f"Player {players[1]}: {self.user_guess[1]}, {self.applied_guess[-2]}\n"
+        board += f"Player {players[0]}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
+        board += f"Player {players[1]}: {self.user_guess[1]}, {self.applied_guess[1]}\n"
         board += "-------------------\n"
 
         return board
@@ -108,6 +108,6 @@ class Board:
         gu.insert(0 , g)
         m = ""
         for v in gu:
-            m += f"{v} "
+            m += f"{v}"
 
         self.user_guess[current] = m
