@@ -6,17 +6,34 @@ from mastermind.game.roster import Roster
 class Board:
 
     def __init__(self):
+        dawson_work
         user_guess = []
         applied_guess = []
         ""
+
+        """The class constructor.
+        
+        Args:
+            self (Board): an instance of Board
+        """
+
         self.code = 0
+        self._prepare()
 
     def _prepare(self):
-        ""
+        """Sets up the initial board to be used in the game
+        
+        Args:
+            self (Board): an instance of Board
+        """
         self.code = random.randint(1000,9999)
 
     def board_string(self, player1, player2):
-        ""
+        """Turns the board into a string to be printed 
+
+        Args:
+            self (Board): an instance of Board
+        """
         if len(self.user_guess) == 1:
             board = "\n-------------------\n"
             board += f"Player {player1}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
