@@ -94,8 +94,8 @@ class Board:
 
         gu =[]
         gr = 0
-        g = int(turn._guess % 10)
-        gr = turn._guess - g
+        g = int(guess % 10)
+        gr = guess - g
         gu.insert(0 , g)
         g = int((gr % 100) / 10)
         gr = gr - (g * 10)
