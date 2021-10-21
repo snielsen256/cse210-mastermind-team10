@@ -41,8 +41,8 @@ class Board:
             board += "-------------------\n"
 
         board = "\n-------------------\n"
-        board += f"Player {players[0]}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
-        board += f"Player {players[1]}: {self.user_guess[1]}, {self.applied_guess[1]}\n"
+        board += f"Player {players[0].get_name()}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
+        board += f"Player {players[1].get_name()}: {self.user_guess[1]}, {self.applied_guess[1]}\n"
         board += "-------------------\n"
 
         return board
@@ -78,9 +78,9 @@ class Board:
             l = 0
             for j in guesss:
                 if j == i and k == l:
-                    revealed[l] = "X "
+                    revealed[l] = "X"
                 elif j == i and k != l:
-                    revealed[l] = "O "
+                    revealed[l] = "O"
                 
                 
                 l += 1
