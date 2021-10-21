@@ -28,11 +28,13 @@ class Board:
         self.user_guess.append("----")
         self.applied_guess.append("****")
         self.applied_guess.append("****")
+
     def board_string(self, players):
         """Turns the board into a string to be printed 
 
         Args:
             self (Board): an instance of Board
+            players: a list of player objects
         """
         if len(self.user_guess) == 1:
             board = "\n-------------------\n"
@@ -67,6 +69,7 @@ class Board:
             parameters:
             self: instance on the board
             guess: the players number
+            current: index of which player's trun it is
             """
 
         k = 0

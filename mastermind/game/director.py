@@ -53,6 +53,7 @@ class Director:
             name = self._console.read(f"Enter a name for player {n + 1}: ")
             player = Player(name)
             self._roster.add_player(player)
+        #Brings us back to player one
         self._roster.next_player()
     
     def _get_inputs(self):
@@ -88,7 +89,7 @@ class Director:
  
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
-        this case, that means checking if there are stones left and declaring the winner.
+        this case, that means checking if the answer is correct and declaring the winner.
 
         Args:
             self (Director): An instance of Director.
