@@ -61,7 +61,7 @@ class Board:
         return False
         
 
-    def apply_guess(self,guess, current):
+    def apply_guess(self, guess, current):
         """Takes the guess and comapres it to the correct answer and places x,o,* where 
             needed.
             parameters:
@@ -70,13 +70,13 @@ class Board:
             """
 
         k = 0
-        guesss = str(int(guess))
-        number = str(int(self.code))
+        guesss = str(guess)
+        number = str(self.code)
         revealed = ["*", "*", "*", "*"]
 
         for i in number:
             l = 0
-            for j in guess:
+            for j in guesss:
                 if j == i and k == l:
                     revealed[l] = "X "
                 elif j == i and k != l:
