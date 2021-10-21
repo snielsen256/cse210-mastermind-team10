@@ -72,7 +72,7 @@ class Board:
         k = 0
         guess_string = str(guess)
         code_string = str(self.code)
-        revealed = ["* ", "* ", "* ", "* "]
+        revealed = ["*", "*", "*", "*"]
 
         for i in range(len(code_string)):
             l = 0
@@ -90,5 +90,5 @@ class Board:
         for i in revealed:
             m += i
         self.applied_guess[current] = m
-
+        self.user_guess[current] = guess
         ""
