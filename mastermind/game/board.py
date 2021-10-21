@@ -41,8 +41,8 @@ class Board:
             board += "-------------------\n"
 
         board = "\n-------------------\n"
-        board += f"Player {players[0]}: {self.user_guess[-1]}, {self.applied_guess[-1]}\n"
-        board += f"Player {players[1]}: {self.user_guess[-2]}, {self.applied_guess[-2]}\n"
+        board += f"Player {players[0]}: {self.user_guess[0]}, {self.applied_guess[-1]}\n"
+        board += f"Player {players[1]}: {self.user_guess[1]}, {self.applied_guess[-2]}\n"
         board += "-------------------\n"
 
         return board
