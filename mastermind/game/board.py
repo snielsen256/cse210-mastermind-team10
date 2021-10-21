@@ -24,7 +24,11 @@ class Board:
             self (Board): an instance of Board
         """
         self.code = random.randint(1000,9999)
-    def board_string(self, player1, player2):
+        self.user_guess.append("----")
+        self.user_guess.append("----")
+        self.applied_guess.append("****")
+        self.applied_guess.append("****")
+    def board_string(self, players):
         """Turns the board into a string to be printed 
 
         Args:
@@ -32,13 +36,13 @@ class Board:
         """
         if len(self.user_guess) == 1:
             board = "\n-------------------\n"
-            board += f"Player {player1}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
-            board += f"Player {player2}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
+            board += f"Player {players[0]}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
+            board += f"Player {players[1]}: {self.user_guess[0]}, {self.applied_guess[0]}\n"
             board += "-------------------\n"
 
         board = "\n-------------------\n"
-        board += f"Player {player1}: {self.user_guess[-1]}, {self.applied_guess[-1]}\n"
-        board += f"Player {player2}: {self.user_guess[-2]}, {self.applied_guess[-2]}\n"
+        board += f"Player {players[0]}: {self.user_guess[-1]}, {self.applied_guess[-1]}\n"
+        board += f"Player {players[1]}: {self.user_guess[-2]}, {self.applied_guess[-2]}\n"
         board += "-------------------\n"
 
         return board
@@ -68,10 +72,10 @@ class Board:
         k = 0
         guess_string = str(guess)
         code_string = str(self.code)
-        for i in range(len(self.code)):
+        for i in range(len(code_string)):
             l = 0
-            for j in range(len(guess)):
-                if guess_string[j] == code_string[i] & l == k:
+            for j in range(len(guess_string)):
+                if guess_string[j] == code_string[i] and l == k:
                     self.applied_guess[j] = 'x'
                 
                 elif guess_string[j] == code_string[i]:
