@@ -70,7 +70,7 @@ class Director:
         self._console.write(f"{player.get_name()}'s turn:")
         
         guess = self._console.read_number("What is your guess? ")
-        while not(guess < 4 or guess > 4):
+        while not(guess < 1000 or guess > 9999):
             guess = self._console.read_number("What is your guess? ")
         turn = Turn(guess)
         player.set_turn(turn)
