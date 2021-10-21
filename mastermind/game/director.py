@@ -81,7 +81,7 @@ class Director:
         """
         player = self._roster.get_current()
         turn = player.get_turn()
-        self._board.apply(turn, self._roster.current)
+        self._board.apply_guess(turn, self._roster.current)
  
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
