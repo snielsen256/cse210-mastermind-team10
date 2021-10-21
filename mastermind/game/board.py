@@ -72,20 +72,23 @@ class Board:
         k = 0
         guess_string = str(guess)
         code_string = str(self.code)
-        m = ""
+        revealed = ["* ", "* ", "* ", "* "]
+
         for i in range(len(code_string)):
             l = 0
             for j in range(len(guess_string)):
                 if guess_string[j] == code_string[i] and l == k:
-                    m += 'x'
+                    revealed[l] += 'x'
                 
                 elif guess_string[j] == code_string[i]:
-                    m += 'o'
-                else:
-                    m += '*'
+                    revealed[l] += 'o'
+                
                 l += 1
             k += 1
         
+        m = ""
+        for i in revealed:
+            m += i
         self.applied_guess[current] = m
 
         ""
