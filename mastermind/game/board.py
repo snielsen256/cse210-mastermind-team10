@@ -78,10 +78,10 @@ class Board:
             l = 0
             for j in range(len(guess_string)):
                 if guess_string[j] == code_string[i] and l == k:
-                    revealed[l] += 'x'
+                    revealed[l] = 'x'
                 
                 elif guess_string[j] == code_string[i]:
-                    revealed[l] += 'o'
+                    revealed[l] = 'o'
                 
                 l += 1
             k += 1
