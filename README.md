@@ -37,3 +37,4 @@ root                    (project root folder)
 * # TODO: Add your names and emails here
 * Stephen Nielsen - snielsen256@byui.edu
 * Jace Wilderman - jwilderman@byui.edu
+* Dawson Miskin - miskindr13@gmail.com
