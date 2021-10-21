@@ -70,21 +70,22 @@ class Board:
             """
 
         k = 0
-        guess_string = str(guess)
-        code_string = str(self.code)
+        guesss = str(int(guess))
+        number = str(int(self.code))
         revealed = ["*", "*", "*", "*"]
 
-        for i in range(len(code_string)):
+        for i in number:
             l = 0
-            for j in range(len(guess_string)):
-                if guess_string[j] == code_string[i] and l == k:
-                    revealed[l] = 'x'
+            for j in guess:
+                if j == i and k == l:
+                    revealed[l] = "X "
+                elif j == i and k != l:
+                    revealed[l] = "O "
                 
-                elif guess_string[j] == code_string[i] and l != k:
-                    revealed[l] = 'o'
                 
                 l += 1
-            k += 1
+                
+            k +=1
         
         m = ""
 
